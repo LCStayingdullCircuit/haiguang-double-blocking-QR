@@ -17,6 +17,7 @@ make
 - 建议设置：`b = 32`
 
 ### 实验数据
+- cuSOLVER只需要m和n，double blocking算法需要额外的nb和b，所以相同m，n执行时，cuSOLVER数据不变
 
 | `m`     | `n`     | `nb`   | `b`   | Double Blocking Time(s) | Double Blocking TFLOPS | cuSolver Time(s) | cuSolver TFLOPS |  
 |---------|---------|--------|-------|--------------------------|------------------------|------------------|----------------|  
