@@ -23,6 +23,7 @@ make
 - double blocking算法默认生成W，Y，R矩阵，其中W和Y矩阵可以用来生成Q
 - 对于cuSolver，执行cusolverDnSgeqrf函数只生成Householder向量，而不显式生成
 - 下面表格数据为不显式生成Q的性能对比
+  
 | `m`     | `n`     | `nb`   | `b`   | Double Blocking Time(s) | Double Blocking TFLOPS | cuSolver Time(s) | cuSolver TFLOPS |  
 |---------|---------|--------|-------|--------------------------|------------------------|------------------|----------------|  
 | 2048    | 2048    | 128    | 32    | 0.0855                   | 0.1340                 | 0.0882           | 0.1299         |  
@@ -49,6 +50,7 @@ make
 - double blocking算法通过额外执行gemm生成Q矩阵
 - cuSolver通过额外执行cusolverDnSorgqr函数生成Q矩阵
 - 下面表格数据为显式生成Q的性能对比
+  
 | `m`     | `n`     | `nb`   | `b`   | Double Blocking Time(s) | Double Blocking TFLOPS | cuSolver Time(s) | cuSolver TFLOPS |  
 |---------|---------|--------|-------|--------------------------|------------------------|------------------|----------------|  
 | 128     | 128     | 64     | 32    | 0.0057                   | 0.0005                 | 0.0049           | 0.0006         |  
