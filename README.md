@@ -1,6 +1,3 @@
-
-# haiguang-double-blocking-QR
-
 # 海光平台实现 Double Blocking QR 分解
 
 ## 编译
